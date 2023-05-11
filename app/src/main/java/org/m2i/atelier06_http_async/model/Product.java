@@ -8,6 +8,7 @@ public class Product {
     private String imageUrl2;
     private double rating;
     private int num_reviews;
+    private double price ;
 
     public Product() {
     }
