@@ -1,26 +1,45 @@
 package org.m2i.atelier06_http_async.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
     private String id ;
     private String title ;
     private String description ;
-    private String imageUrl1;
-    private String imageUrl2;
+    private List<String> images;
     private double rating;
     private int num_reviews;
-    private double price ;
+    private String price ;
+    private ProductAttributes attributes;
 
     public Product() {
+        images = new ArrayList<>();
+        attributes = new ProductAttributes();
     }
 
-    public Product(String id, String title, String description, String imageUrl1, String imageUrl2, double rating, int num_reviews) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.imageUrl1 = imageUrl1;
-        this.imageUrl2 = imageUrl2;
-        this.rating = rating;
-        this.num_reviews = num_reviews;
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public ProductAttributes getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(ProductAttributes attributes) {
+        this.attributes = attributes;
     }
 
     public String getId() {
@@ -45,22 +64,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getImageUrl1() {
-        return imageUrl1;
-    }
-
-    public void setImageUrl1(String imageUrl1) {
-        this.imageUrl1 = imageUrl1;
-    }
-
-    public String getImageUrl2() {
-        return imageUrl2;
-    }
-
-    public void setImageUrl2(String imageUrl2) {
-        this.imageUrl2 = imageUrl2;
     }
 
     public double getRating() {

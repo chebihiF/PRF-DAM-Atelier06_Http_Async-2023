@@ -60,11 +60,22 @@ public class NewsTasks extends AsyncTask<String,Integer,String> {
                 product.setId(product_json.getString("product_id"));
                 product.setDescription(product_json.getString("product_description"));
                 product.setTitle(product_json.getString("product_title"));
-                product.setRating(Double.parseDouble(product_json.getString("product_rating")));
-                product.setNum_reviews(Integer.parseInt(product_json.getString("product_num_reviews")));
+                product.setRating(product_json.getDouble("product_rating"));
+                product.setNum_reviews(product_json.getInt("product_num_reviews"));
                 JSONArray images = product_json.getJSONArray("product_photos");
-                product.setImageUrl1(images.getString(0));
-                product.setImageUrl2(images.getString(1));
+                for(int j=0; j<images.length();j++)
+                {
+                    product.getImages().add(images.getString(j));
+                }
+                JSONObject attributes = product_json.getJSONObject("product_attributes");
+                product.getAttributes().setDepartment(attributes.getString("Department"));
+                product.getAttributes().setSize(attributes.getString("Size"));
+                product.getAttributes().setMaterial(attributes.getString("Material"));
+                product.getAttributes().setFeatures(attributes.getString("Features"));
+                product.getAttributes().setClosureStyle(attributes.getString("Closure Style"));
+                product.getAttributes().setStyle(attributes.getString("Style"));
+                JSONObject offer = product_json.getJSONObject("offer");
+                product.setPrice(offer.getString("price"));
                 products.add(product);
             }
 
