@@ -1,9 +1,10 @@
 package org.m2i.atelier06_http_async.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product {
+public class Product implements Serializable {
     private String id ;
     private String title ;
     private String description ;
@@ -13,7 +14,7 @@ public class Product {
     private String price ;
     private ProductAttributes attributes;
 
-    public Product() {
+    public Product()  {
         images = new ArrayList<>();
         attributes = new ProductAttributes();
     }

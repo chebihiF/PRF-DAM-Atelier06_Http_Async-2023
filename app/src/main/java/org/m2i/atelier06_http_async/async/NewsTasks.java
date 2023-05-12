@@ -92,7 +92,7 @@ public class NewsTasks extends AsyncTask<String,Integer,String> {
             }
 
             productsList.setLayoutManager(new LinearLayoutManager(context));
-            ProductAdapter adapter = new ProductAdapter(products);
+            ProductAdapter adapter = new ProductAdapter(products, context);
             productsList.setAdapter(adapter);
 
 

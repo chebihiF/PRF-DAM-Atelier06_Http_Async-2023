@@ -1,6 +1,8 @@
 package org.m2i.atelier06_http_async.model;
 
-public class ProductAttributes {
+import java.io.Serializable;
+
+public class ProductAttributes implements Serializable {
     private String department ;
     private String size ;
     private String material;
