@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,12 +8,200 @@
     android:layout_height="match_parent"
     tools:context=".ProductDetails">
 
-    <TextView
-        android:id="@+id/product_info"
-        android:text="Product info"
-        android:textSize="15dp"
-        android:padding="10dp"
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:padding="20dp"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/image_val"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:src="@drawable/shopping"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+
+            <GridLayout
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:useDefaultMargins="true"
+                android:rowCount="2"
+                android:columnCount="2">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/image_v1"
+                    android:src="@drawable/shopping"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/image_v2"
+                    android:src="@drawable/shopping"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/image_v3"
+                    android:src="@drawable/shopping"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:id="@+id/image_v4"
+                    android:src="@drawable/shopping"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Nike (GS) Court Borough Low 2 SE White/Pink Foam"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/department_txt"
+                android:text="Kids , Girls"
+                android:fontFamily="@font/amaranth"
+                android:paddingLeft="15dp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/size_txt"
+                android:text=" Size:   3½"
+                android:fontFamily="@font/amaranth"
+                android:paddingLeft="15dp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/material_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:text="Material: Genuine Leather, Rubber"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/features_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="15dp"
+                android:text= "Features: Slip Resistant, Fashion Sneaker"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/closure_style_txt"
+                android:text= "Closure Style: Lace-up, Hook and Loop"
+                android:fontFamily="@font/amaranth"
+                android:paddingLeft="15dp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/style_txt"
+                android:text= "Style: Casual"
+                android:fontFamily="@font/amaranth"
+                android:paddingLeft="15dp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RatingBar
+                android:progressTint="@color/yellow"
+                android:id="@+id/rating_val"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:max="5"
+                android:numStars="5"
+                android:rating="4.7" />
+
+            <TextView
+                android:textColor="#598F1B"
+                android:id="@+id/price_txt"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:paddingLeft="15dp"
+                android:text="$65.00"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/description_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text=" Description: The Nike Court Borough Low 2 brings the power of pink to future all-stars. From the laces to the Swoosh design to the sole, pink isn’t just a color on these kicks—it’s an attitude! Made to be durable, these shoes have a classic look and feel that’s ready for everyday play"
+                android:textSize="15sp" />
+            <Button
+                android:id="@+id/cart_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add to cart"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
 
 </RelativeLayout>
