@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -47,7 +48,7 @@ public class ProductDetails extends AppCompatActivity {
         image_val4 = findViewById(R.id.image_v4);
 
         if(product.getTitle() != null) title_txt.setText(product.getTitle());
-        if(product.getDescription() != null) description_txt.setText(description_txt.getText());
+        if(product.getDescription() != null) description_txt.setText(Html.fromHtml("<b> Description : </b>"+description_txt.getText().toString().substring(13)));
         if(product.getPrice() != null) price_txt.setText(product.getPrice());
         if(product.getAttributes().getDepartment() != null) department_txt.setText(product.getAttributes().getDepartment());
         if(product.getAttributes().getFeatures() != null) feature_txt.setText(product.getAttributes().getFeatures());
