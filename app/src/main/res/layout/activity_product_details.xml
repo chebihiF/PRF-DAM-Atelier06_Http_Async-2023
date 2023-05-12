@@ -25,7 +25,7 @@
                 android:id="@+id/image_val"
                 android:scaleX="1.2"
                 android:scaleY="1.2"
-                android:src="@drawable/shopping"
+                android:src="@drawable/image_rec_foreground"
                 android:layout_width="200dp"
                 android:layout_height="200dp" />
 
@@ -44,7 +44,7 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:id="@+id/image_v1"
-                    android:src="@drawable/shopping"/>
+                    android:src="@drawable/image_rec_foreground"/>
 
                 <ImageView
                     android:layout_width="0dp"
@@ -53,7 +53,7 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:id="@+id/image_v2"
-                    android:src="@drawable/shopping"/>
+                    android:src="@drawable/image_rec_foreground"/>
 
                 <ImageView
                     android:layout_width="0dp"
@@ -62,7 +62,7 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:id="@+id/image_v3"
-                    android:src="@drawable/shopping"/>
+                    android:src="@drawable/image_rec_foreground"/>
 
                 <ImageView
                     android:layout_width="0dp"
@@ -71,7 +71,7 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:id="@+id/image_v4"
-                    android:src="@drawable/shopping"/>
+                    android:src="@drawable/image_rec_foreground"/>
 
             </GridLayout>
 
@@ -86,7 +86,7 @@
             android:fontFamily="@font/amaranth"
             android:gravity="center"
             android:padding="15dp"
-            android:text="Nike (GS) Court Borough Low 2 SE White/Pink Foam"
+            android:text=""
             android:textSize="15sp" />
 
         <LinearLayout
@@ -166,7 +166,7 @@
                 android:layout_marginTop="5dp"
                 android:max="5"
                 android:numStars="5"
-                android:rating="4.7" />
+                android:rating="0" />
 
             <TextView
                 android:textColor="#598F1B"
